@@ -15,6 +15,6 @@ https://www.meetup.com/aws-sbg-at-vasavi-college-of-engineering/events/316499654
 ## Fix pem file restrictions
 
 ```sh
-icacls .\demo.pem /grant:r "${env:USERNAME}:R"
+icacls .\demo.pem /grant:r "%USERNAME%:R"
 ```
 
