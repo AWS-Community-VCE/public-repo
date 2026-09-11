@@ -15,6 +15,6 @@ https://www.meetup.com/aws-sbg-at-vasavi-college-of-engineering/events/316499654
 ## Fix pem file restrictions
 
 ```sh
-icacls .\demo.pem /grant:r "%USERNAME%:R"
+icacls .\demo.pem /inheritance:r /grant:r "${env:USERNAME}:(R)" /remove "S-1-5-21-211232357-227797603-3973255227-1006"
 ```
 
