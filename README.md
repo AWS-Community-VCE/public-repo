@@ -3,7 +3,7 @@
 
 ## SSH URI
 ```sh
-ssh -i "AWS-Workshop-Hour1.pem" ubuntu@ec2-204-236-198-113.compute-1.amazonaws.com
+ssh -i "demo.pem" workshop@ec2-204-236-198-113.compute-1.amazonaws.com
 ```
 
 
@@ -15,6 +15,6 @@ https://www.meetup.com/aws-sbg-at-vasavi-college-of-engineering/events/316499654
 ## Fix pem file restrictions
 
 ```sh
-icacls .\demo.pem /inheritance:r /grant:r "$([System.Security.Principal.WindowsIdentity]::GetCurrent().Name):(R)" /remove:g "Users" "Authenticated Users" "Everyone"
+icacls demo.pem /inheritance:r /grant:r "%USERNAME%:R" /remove "Users" "Authenticated Users" "Everyone"
 ```
 
