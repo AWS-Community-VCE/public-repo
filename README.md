@@ -15,6 +15,6 @@ https://www.meetup.com/aws-sbg-at-vasavi-college-of-engineering/events/316499654
 ## Fix pem file restrictions
 
 ```sh
-icacls .\demo.pem /reset; icacls .\demo.pem /inheritance:r; icacls .\demo.pem /grant:r "$([System.Security.Principal.WindowsIdentity]::GetCurrent().Name):(R)"
+icacls .\demo.pem /inheritance:r /grant:r "$([System.Security.Principal.WindowsIdentity]::GetCurrent().Name):(R)" /remove:g "Users" "Authenticated Users" "Everyone"
 ```
 
