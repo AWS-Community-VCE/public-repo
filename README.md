@@ -3,7 +3,7 @@
 
 ## SSH URI
 ```sh
-ssh -i "AWS-Workshop-Hour1.pem" workshop@ec2-52-200-213-111.compute-1.amazonaws.com
+ssh -i "AWS-Workshop-Hour1.pem" ubuntu@ec2-204-236-198-113.compute-1.amazonaws.com
 ```
 
 
